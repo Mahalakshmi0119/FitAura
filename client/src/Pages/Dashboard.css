@@ -1,0 +1,68 @@
+.dashboard-section {
+  margin: 10px;   /* 👈 controls space ABOVE and BELOW */
+}
+.week-wrapper {
+  padding: 14px 16px;   /* was bigger before */
+}
+.today-section {
+  margin-top: 28px;   /* space AFTER This Week */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;          /* even spacing between cards */
+}
+
+/* 🌿 Dashboard background */
+.dashboard-container {
+  min-height: 100vh;
+  padding: 20px;
+background:linear-gradient(180 deg,#fcded9,#f4d1ff);
+  
+}
+.section-box {
+  margin-top: 32px;
+  background: whitesmoke;
+  padding: 20px;
+  border-radius: 18px ;
+  box-shadow:0 6px 18px rgba(0,0,0,0.8);
+  
+}
+
+.perfect-day {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+
+  background: rgb(121, 121, 237);
+  color:white;
+  font-weight: 700;
+  font-size: 14px;
+
+  animation: badgePop 0.9s ease;
+  box-shadow: 0 8px 18px rgba(251,191,36,0.45);
+}
+.daily-insight{
+  background: linear-gradient(135deg,#6a5acd,#8a6cff);
+  color:white;
+  padding:14px 20px;
+  border-radius:14px;
+  margin-top:15px;
+  font-weight:500;
+  width:40%
+}
+
+/* Animation */
+@keyframes badgePop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+

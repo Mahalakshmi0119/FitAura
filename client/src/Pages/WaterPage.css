@@ -1,0 +1,216 @@
+.water-wrapper {
+ background-image: 
+       radial-gradient(
+      circle at center,
+      rgba(255,255,255,0.15) 0%,   /* soft light center */
+      rgba(0,0,0,0.25) 60%,       /* slight dim */
+      rgba(0,0,0,0.5) 100%        /* darker edges */
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.5)
+    ),url("C:\reactjs\FitAura\client\public\images\w.png");
+ background-size:cover;
+ background-position: center;
+ background-repeat: no-repeat;
+  padding: 10px;
+  border-radius: 22px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+  width: 100%;
+   min-height: 100vh;
+  display: flex;
+
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+}
+
+/* title */
+.water-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: rgb(241, 241, 241);
+  text-align: center;
+}
+
+/* subtitle */
+.water-subtitle {
+  text-align: center;
+  color: whitesmoke;
+}
+.wave-container{
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 35px 20px;
+  background: #eef5ff;
+  margin-top: 50px;
+}
+.wave{
+  position: absolute;
+  width: 250%;
+  height: 300px;
+  left: -50%;
+  bottom: -60px;
+
+  background:rgba(79,140,255,0.25);
+  border-radius: 100% 100% 0 0;
+
+  clip-path: polygon(
+  0% 55%, 10% 60%, 20% 50%, 30% 58%, 40% 48%,
+  50% 60%, 60% 50%, 70% 58%, 80% 48%, 90% 60%, 100% 55%,
+  100% 100%, 0% 100%
+);
+
+  animation: hillMove 4s ease-in-out infinite;
+
+}
+
+
+
+.wave1{
+  animation-delay: 0s;
+}
+
+.wave2{
+  bottom: -80px;
+  opacity: 0.5;
+  animation-delay: 8s;
+}
+
+/* mountain slope motion */
+@keyframes hillMove{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-35px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+
+/* buttons row */
+.water-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 100px;   /* 👈 CONTROL GAP HERE */
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+/* circle */
+.water-circle {
+  width: 82px;
+  height: 82px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.water-circle:hover {
+  transform: translateY(-4px);
+}
+
+/* numbers */
+.water-circle p {
+  margin: 4px 0 0;
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.progress-wrapper {
+  width: 80%;        /* bar area width */
+  margin: 15px auto; /* center block */
+}
+/* info row */
+.water-info {
+  display: flex;
+  justify-content:space-between;
+  margin: 22px 0 10px;
+  font-weight: 600;
+  gap: 2px;
+  color: whitesmoke;
+}
+
+/* progress */
+.progress-bar {
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 80%;
+  margin: 0% auto;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg,#60a5fa,#2563eb);
+  transition: 0.8s ease-in-out;
+}
+.user-input-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 10px;
+  width: 20%;
+  margin: 0% auto;
+  margin-top: 16px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.row input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  text-align: right;
+  color: #555;
+  width: 100%;
+  max-width: 150%;
+}
+
+.row strong {
+  color: #2563eb;
+  font-size: 16px;
+}
+
+@media (max-width:600px){
+
+  .row{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .row input{
+    width:100%;
+    margin-top:5px;
+    box-sizing:border-box;
+  }
+
+}

@@ -1,0 +1,206 @@
+/* ================= BASE ================= */
+.plan-card {
+  position: relative;
+  border-radius: 18px;
+  padding: 18px;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 18px;
+
+  /* ENTRY START */
+  opacity: 0;
+  transform: translateY(28px) scale(0.98);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    opacity 0.4s ease;
+}
+
+/* ================= ENTRY ================= */
+.plan-card.enter {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ================= HOVER (ONLY AFTER ENTER) ================= */
+.plan-card.enter:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= PRESS ================= */
+/* 🫳 Press-down micro interaction */
+.plan-card:active {
+  transform: translateY(2px) scale(0.98);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ================= VARIANTS ================= */
+.plan-card.workout {
+  background: linear-gradient(135deg, #2563eb, #0d9488);
+}
+.plan-card.water {
+  background: linear-gradient(135deg, #0ea5e9, #22c55e);
+}
+.plan-card.sleep {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+.plan-card.meditation {
+  background: linear-gradient(135deg, #ec4899, #f97316);
+}
+
+/* ================= ACCENT ================= */
+.plan-accent {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 6px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* ================= BODY ================= */
+.plan-body {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.plan-image-wrap {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 12px;
+  border-radius: 16px;
+}
+
+.plan-image {
+  width: 80px;
+  height: 80px;
+}
+
+/* ================= TEXT ================= */
+.plan-text h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.status.done {
+  color: #ecfdf5;
+}
+.status.pending {
+  color: #fef3c7;
+}
+
+/* ================= CHECKBOX ================= */
+.plan-action {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: white;
+  border: 2px solid #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.plan-action.done {
+  border-color: #16a34a;
+  color: #16a34a;
+}
+
+/* ================= DISABLED ================= */
+.plan-card.disabled {
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+
+
+/* ================= PROGRESS RING ================= */
+.plan-action {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 👇 FIX: separate from card background */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+
+  border: 2px solid rgba(214, 45, 90, 0.08);
+
+  box-shadow:
+    0 6px 16px rgba(224, 135, 208, 0.932),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  z-index: 5;
+}
+
+
+/* Empty ring */
+.plan-action .ring {
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  border: 2px solid #d1d5db;
+}
+
+/* Tick */
+.plan-action .tick {
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+  font-weight: 800;
+  color: whitesmoke;
+  opacity: 0;
+  transform: scale(0.4);
+  transition: all 0.3s ease;
+}
+
+/* Completed ring animation */
+.plan-action.done {
+  background:rgba(255, 255, 255, 0.95);
+  animation: ringFill 0.6s ease forwards;
+}
+
+.plan-action.done .ring {
+  border-color: transparent;
+}
+
+.plan-action.done .tick {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Ring draw animation */
+@keyframes ringFill {
+  from {
+    background:
+      conic-gradient(#a31684 0deg, #e5e7eb 0deg);
+  }
+  to {
+    background:
+      conic-gradient(#a3169a 360deg, #e5e7eb 0deg);
+  }
+}
+
+
+
+
+

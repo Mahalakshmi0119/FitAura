@@ -1,0 +1,47 @@
+.progress-ring {
+  transform: rotate(-90deg);
+  display: block;
+  overflow: visible;
+}
+
+.ring-bg {
+  fill: none;
+  stroke: #e5e7eb;
+  opacity: 0.6;
+}
+
+.ring-progress {
+  fill: none;
+  stroke-linecap: round;
+
+  transition:
+    stroke-dashoffset 0.8s ease,
+    stroke 0.4s ease; /* 👈 smooth color change */
+}
+
+.ring-text {
+  fill: #374151;
+  font-size: 18px;
+  font-weight: 700;
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+
+}
+/* 🌟 PERFECT DAY EFFECT */
+.progress-ring.perfect .ring-progress {
+  filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.9));
+  animation: pulseGlow 1.6s ease-in-out infinite;
+}
+
+/* 💓 Pulse animation */
+@keyframes pulseGlow {
+  0% {
+    filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(245, 158, 11, 1));
+  }
+  100% {
+    filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.6));
+  }
+}

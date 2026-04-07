@@ -1,0 +1,94 @@
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image:    linear-gradient(
+      to right,
+      rgba(0,0,0,0.35) 0%,   /* soft left */
+      rgba(0,0,0,0.6) 30%,
+      rgba(0,0,0,0.75) 50%,  /* 🔥 stronger center */
+      rgba(0,0,0,0.6) 70%,
+      rgba(0,0,0,0.35) 100%  /* soft right */
+    ), url('C:\reactjs\FitAura\client\public\images\fitnes.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-card {
+  width: 470px;
+  
+  padding: 25px 90px 40px 70px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 6px;
+  color: whitesmoke;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.login-card input:focus {
+  border-color: #22c55e;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 24px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #16a34a;
+}
+
+.login-message {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #e11d48;
+}
+
+/* ✨ Login page entrance animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-card {
+  animation: fadeSlideUp 0.6s ease-out;
+    animation-delay: 0.15s;
+  animation-fill-mode: both;
+}
+.account{
+  color:white
+}
+.register{
+  color:white
+}

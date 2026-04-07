@@ -1,0 +1,150 @@
+/* 🌑 Outer container (classy, medium tone) */
+.week-wrapper {
+  display: flex;
+  gap: 14px;                 /* even spacing */
+  padding: 16px;
+        /* your chosen background */
+  border-radius: 14px;
+  justify-content: space-between;
+}
+
+/* 🟩 Individual day card */
+.week-card {
+  width: 68px;
+  height: 72px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+
+  /* 🔑 IMPORTANT FOR RING */
+  box-sizing: border-box;
+  padding: 4px;              /* creates space for gold ring */
+}
+
+/* ✅ Completed */
+.week-card.done {
+  background: #29C17E;
+  color: white;
+}
+
+/* 💤 REST day */
+.week-card.rest {
+   background-color:#fcee81;
+ 
+  box-shadow: none;
+}
+
+
+/* REST text */
+.week-card.rest .week-status {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #64748b;
+}
+/* REST hover = calm (no jump) */
+.week-card.rest:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+
+/* ❌ Missed */
+.week-card.missed {
+  background-color: rgb(244, 54, 54);   /* best */
+}
+
+/* 🟡 TODAY highlight ring */
+/* 🟡 TODAY highlight (premium gold ring) */
+.week-card.today {
+  
+  box-shadow:
+    0 0 0 4px rgba(245, 158, 11, 0.25), /* outer glow */
+    0 6px 14px rgba(0, 0, 0, 0.12);    /* lift */
+}
+.week-card.today.done {
+  box-shadow:
+    0 0 0 4px rgba(245, 158, 11, 0.35),
+    0 8px 18px rgba(34, 197, 94, 0.25);
+}
+
+
+/* Day label */
+.week-day {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+/* Tick / cross / REST text */
+.week-status {
+  font-size: 18px;
+  font-weight: 700;
+}
+.week-metrics {
+  font-size: 11px;
+  line-height: 1.2;
+  opacity: 0.9;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Color tuning */
+.week-card.done .week-metrics {
+  color: #eafff1;
+}
+
+.week-card.missed .week-metrics {
+  color: #555;
+}
+/* ✨ Premium hover lift */
+.week-card {
+  width: 68px;
+  height: 72px;
+
+  /* 👇 TOP-ONLY rounded */
+  border-radius: 12px 12px 6px 6px;
+
+  background: #ffffff;
+  color: #111;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+  box-sizing: border-box;
+
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* Hover effect */
+.week-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+.week-card.today:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 26px rgba(245, 158, 11, 0.35); /* gold glow */
+}
+
+.week-kcal {
+  font-size: 11px;
+  margin-top: 4px;
+  opacity: 0.85;
+}
+.week-wrapper {
+  padding: 14px 16px;   /* was bigger before */
+}
+
+
