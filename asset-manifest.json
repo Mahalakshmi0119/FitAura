@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/FitAura/static/css/main.ad25a81c.css",
-    "main.js": "/FitAura/static/js/main.36aba7c1.js",
+    "main.js": "/FitAura/static/js/main.cdb49b43.js",
     "static/media/w.png": "/FitAura/static/media/w.9a5ad9b4d69336b9b88e.png",
     "static/media/fitnes.png": "/FitAura/static/media/fitnes.e6f3400d3b2daa94ce68.png",
     "static/media/night.png": "/FitAura/static/media/night.ff48c625223314b890f0.png",
     "index.html": "/FitAura/index.html",
     "main.ad25a81c.css.map": "/FitAura/static/css/main.ad25a81c.css.map",
-    "main.36aba7c1.js.map": "/FitAura/static/js/main.36aba7c1.js.map"
+    "main.cdb49b43.js.map": "/FitAura/static/js/main.cdb49b43.js.map"
   },
   "entrypoints": [
     "static/css/main.ad25a81c.css",
-    "static/js/main.36aba7c1.js"
+    "static/js/main.cdb49b43.js"
   ]
 }
